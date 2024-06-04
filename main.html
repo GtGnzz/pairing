@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap">
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #111;
+      background-image: url("https://telegra.ph/file/b226a6ba585cd559da521.png");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      font-family: 'Kanit', sans-serif;
+      color: #fff;
+    }
+
+    .card {
+      width: 80%;
+      height: 80%;
+      background: rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(7px);
+      border-radius: 20px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+      text-align: center;
+    }
+
+    .card img {
+      width: 50%;
+      height: auto;
+      border-radius: 50%;
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      --color: #FFC0CB;
+      --color2: #fff;
+      width: 200px;
+      padding: 0.8em 1.75em;
+      background-color: transparent;
+      border-radius: 6px;
+      border: 2px solid var(--color);
+      transition: 0.5s;
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+      z-index: 1;
+      font-weight: 500;
+      font-size: 16px;
+      text-transform: uppercase;
+      color: var(--color);
+      margin: 10px 0;
+      text-align: center;
+    }
+
+    .btn::after, .btn::before {
+      content: '';
+      display: block;
+      height: 100%;
+      width: 200%;
+      position: absolute;
+      transition: transform 0.5s ease-out;
+      background-color: var(--color);
+      z-index: -1;
+    }
+
+    .btn::before {
+      top: -100%;
+      left: -50%;
+      transform: skew(45deg) translate(-50%, -50%);
+    }
+
+    .btn::after {
+      top: 200%;
+      left: 150%;
+      transform: skew(45deg) rotate(180deg) translate(-50%, -50%);
+    }
+
+    .btn:hover::before, .btn:hover::after {
+      transform: skew(45deg) rotate(180deg) translate(-50%, -50%) scale(1.5);
+    }
+
+    .btn:hover {
+      color: var(--color2);
+      background-color: var(--color);
+    }
+
+    .btn:active {
+      filter: brightness(0.8);
+      transform: scale(0.98);
+    }
+
+    .instructions {
+      margin-top: 20px;
+      font-size: 16px;
+      color: #fff;
+      line-height: 1.5;
+      text-align: left;
+    }
+
+    @media (max-width: 600px) {
+      .card {
+        width: 80%;
+        height: auto;
+      }
+
+      .btn {
+        width: 80%;
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <img src="https://telegra.ph/file/4090c7c26ba9c796b4af1.png" alt="Logo">
+    <button onclick="window.open('/pair')" class="btn">Pairing</button>
+    <button onclick="window.open('https://whatsapp.com/channel/0029Vaf7kkjGzzKSBcZck73P')" class="btn">Channel Whatsapp</button>
+    <button onclick="window.open('https://chat.whatsapp.com/GXGCj1WFs200HHLhR3lonI')" class="btn">Gerry AI</button>
+    <button onclick="window.open('https://github.com/GtGnzz')" class="btn">Github</button>
+  </div>
+</body>
+</html>
